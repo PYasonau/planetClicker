@@ -17,35 +17,35 @@ $(document).on('mousemove', function(e) {
 } ); 
 
 
-var score = 0; // кол-во кликов
-var currentClicks = 1; // текущие нажатия
+let score = 0; // кол-во кликов
+let currentClicks = 1; // текущие нажатия
 
 
 // загрузка информации при загрузке страницы
 function load(){
-	score = localStorage.getItem("score");
-	score = parseInt(score);
+	this.score = 0;
+	this.currentClicks = 1;
+	this.score = localStorage.getItem("score");
+	this.score = parseInt(score);
 
 	currentClicks = localStorage.getItem("currentClicks");
-	currentClicks = parseInt(currentClicks);
+	currentClicks = parseInt(this.currentClicks);
     //del
-	document.querySelector('.currentClicks').innerHTML = currentClicks;
+	document.querySelector('.currentClicks').innerHTML = this.currentClicks;
 	
-	document.querySelector('.score').innerHTML = score;
+	document.querySelector('.score').innerHTML = this.score;
 }
 function addClicks(){
-	currentClicks = currentClicks + 1;
-	localStorage.setItem("currentClicks", currentClicks);
+	this.currentClicks = this.currentClicks + 1;
+	localStorage.setItem("currentClicks", this.currentClicks);
 	//del
-	document.querySelector('.currentClicks').innerHTML = currentClicks;
+	document.querySelector('.currentClicks').innerHTML = this.currentClicks;
 }
 // добавление кликов при нажатии на планету
 function addScore(){
-	score = score + currentClicks;
-	document.querySelector('.score').innerHTML = score;
-	localStorage.setItem("score", score);
-}
-
+	this.score = this.score + currentClicks;
+	document.querySelector('.score').innerHTML = this.score;
+	
 
 
 
