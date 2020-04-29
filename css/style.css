@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+}
+/*parallax effect*/
+.parallax__layer {
+	background-image: url(../img/space.png);
+  background-size: 110%;
+  height: 100vh;
+}
+/* различные настройки */
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+}
+
+p img{
+  width: 20px;
+  height: 20px;
+}
+
+td {
+  padding: 20px;
+}
+
+/* счетчик кликов */
+.score-box {
+	flex-wrap: wrap;
+	width: 250px;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: #581b98;
+	border: 3px solid #9C1DE7;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	border-top: none;
+	border-bottom: none;
+}
+.score-mat {
+  width: 40px;
+  height: 40px;
+}
+.score {
+	color: #fff;
+	padding: 10px;
+	font-size: 1.4rem;
+  cursor: default;
+}
+
+/* планета */
+.parent-planet {
+  padding-top: 50px;
+}
+.planet {
+	width: 530px;
+	margin: auto;
+}
+.earth {
+  width: 530px;
+  height: 530px;
+}
+
+
+/* магазин */
+.shop-wrapper {
+  position: relative;
+}
+.shop-menu {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  transition: 0.5s;
+  transform: translateY(30%); /* 30% -68%*/
+}
+.shop-menu_active {
+  transform: translateY(-50%);/* 50% */
+}
+.shop-menu-btn {
+  width: 180px;
+  height: 40px;
+  border: 3px solid #ba744c;
+  border-radius: 5px;
+  border-right: none;
+  border-left: none;
+  color: #fff;
+  background-color: #ff9f68;
+  position: fixed;
+  top: -35px;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  transition: 0.2s;
+}
+.shop-menu-btn:hover {
+  background-color: #ba744c;
+  border-color: #ff9f68;
+}
+
+.shop-menu-list {
+  border: 2px solid blue;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+.shop-box {
+  width: 200px;
+}
