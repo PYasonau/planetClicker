@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Planet Clicker</title>
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/icon.png" type="image/png">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive-tabs.css">
+</head>
+<body onload="load()">
+<div class="parallax__layer">
+	<!-- счет кликов -->
+	<div class="score-box center">
+		<img class="score-mat center" src="img/mat.png" alt="material">
+			<span class="score center">0</span>
+			<span class="currentClicks center">0</span>
+	</div>
+	<!-- планета -->
+	<div class="parent-planet">
+		<div class="planet" onclick="addScore()">		
+			<img class="earth" src="img/earth.png" alt="earth">
+		</div>
+	</div>
+
+<!-- магазин -->
+<div class="shop-wrapper">
+<div class="shop-menu"> 
+	<a class="shop-menu-btn">Магазин</a>
+      <div class="shop-menu-list center">
+		<div class="shop-box">
+        	<img src="img/icon.png">
+        	<p>Добавляет +1 к нажатию</p>
+        	<p><img src="img/mat.png"> 10</p>
+			<button onclick="addClicks()">buy</button>
+		</div>
+	</div>
+  </div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/jquery.responsiveTabs.min.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
